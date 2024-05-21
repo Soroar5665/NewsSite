@@ -3,6 +3,7 @@ import requests
 
 # Create your views here.
 
+
 def index(request):
     url = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=178a7d90e43b4fbe9c4c3b1271c1ca0c"
     cricket_news = requests.get(url).json()
@@ -21,3 +22,4 @@ def index(request):
     mylist = zip(title, desc, img, cont)
     context = {'mylist':mylist}
     return render(request, 'index.html', context)
+    abcder
