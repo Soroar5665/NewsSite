@@ -22,4 +22,3 @@ def index(request):
     mylist = zip(title, desc, img, cont)
     context = {'mylist':mylist}
     return render(request, 'index.html', context)
-    abcder
