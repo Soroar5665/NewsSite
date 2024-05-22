@@ -6,21 +6,45 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>OTAKU</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+        <style>
+            .hero.is-primary {
+                background: linear-gradient(135deg, #ff7e5f, #feb47b);
+                color: white;
+                text-align: center;
+            }
+            .hero .title {
+                font-family: 'Comic Sans MS', cursive, sans-serif;
+                font-size: 4rem;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            .hero .subtitle {
+                font-family: 'Arial', sans-serif;
+                font-size: 2rem;
+            }
+            .hero .logo {
+                max-width: 100px;
+                margin: 0 auto 20px;
+            }
+        </style>
     </head>
     <body>
         <section class="hero is-primary">
             <div class="hero-body">
                 <div class="container">
+                    <img src="https://dichthuathanu.com/wp-content/uploads/2021/01/Otaku.jpg" alt="Logo" class="logo">
                     <h1 class="title">
                         OTAKU
                     </h1>
+                    <h2 class="subtitle">
+                        Welcome to the world of Anime and Manga
+                    </h2>
                 </div>
             </div>
         </section>
         <section class="section">
             <div class="container">
-                <div class="rows">
-                    <div class="column is-offset-16 is-10">
+                <div class="columns">
+                    <div class="column is-offset-1 is-10">
                         {% for title, desc, i, cont in mylist %}
                         <div class="box">
                             <article class="media">
@@ -31,7 +55,7 @@
                                             <br>
                                             <img src="{{i}}" alt="">
                                             <span class="subtitle">{{desc}}</span>
-                                            <span class="subtitle">{{cont}}</span>
+                                            <a href="{{ cont }}" class="subtitle">{{ cont }}</a>
                                         </p>
                                     </div>   
                                 </div>
