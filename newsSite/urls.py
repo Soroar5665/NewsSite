@@ -20,5 +20,8 @@ from newsSite import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index)
+    path('', views.index),
+    path('blog/', views.blog),
+    path('contact/', views.contact),
+    path('aboutus/', views.aboutus)
 ]
